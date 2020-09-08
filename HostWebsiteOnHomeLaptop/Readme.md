@@ -32,6 +32,9 @@ Once you are logged in as admin user, check the port forwarding tab and select p
 
 `hostname -I | awk '{print $1}'`
 
+This is the port forward configuration on my router
+![](./img/port_forward.png "Port Forward Configuration image")
+
 At this moment, you need to check that your port is opened successfully by visiting this [website](https://portchecker.co/ "Port Checker - Check Open Ports Online"), in the IP address field write your public IP address and for the port number write the opened port number.
 
 Now we are going to reserve this private IP address to your host machine, so that every time you connect to the router, the same IP address will be assigned to this host machine.
@@ -40,6 +43,9 @@ so check the DHCP reservation tab, and select your private IP and bind it to the
 `temp=$(ip route show | grep "default via" | awk '{print $3}' | cut -d '.' -f 1-3)`
 
 `ip a | grep $temp\\. -B 1 | grep -v $temp | awk '{print $2}'`
+
+This is the configuration of the DHCP reservation on my router
+![](./img/dhcp_reservation.png "DHCP reservation image")
 
 ## Use noip as a dynamic DNS
 
