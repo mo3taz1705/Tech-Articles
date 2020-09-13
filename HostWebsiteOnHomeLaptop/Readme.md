@@ -4,10 +4,12 @@ If you've ever wanted to use your own computer as a server to host your website,
 Many developers want to do this in order to showcase a demo for a website or to express an idea without paying too much for the cloud providers. so here is a free way to do so.
 
 When we think about that there would be 2 main challenges that may oppose us and here we are going to solve them.\
-The first is to be able to forward the traffic to our laptop which is lying behind a router while we are having several devices connected to this router and are sharing the same public IP address.\
-The second is that most of us are having a dynamic public IP and the static one is expensive, so we need to use a domain name instead of using IP address to access the application and this domain name needs to be updated.
+The first is to be able to forward the traffic to our laptop which is lying behind a router while we are having several devices connected to this router and are sharing the same public IP address as shown in the below picture.\
+![](./img/before_port-forwarding.png "Before Port-Forwarding image")
+The second challenge is that most of us are having a dynamic public IP and the static one is expensive, so we need to use a domain name instead of using IP address to access the application and this domain name needs to be updated.
 
-So to solve the previous challenges, we are going to use the port forwarding feature in the router configuration to forward all the traffic that is coming from the outside on a specific port to my computer.\
+So to solve the previous challenges, we are going to use the port forwarding feature in the router configuration to forward all the traffic that is coming from the outside on a specific port to my computer as you can see in the below picture.\
+![](./img/after_port-forwarding.png "After Port-Forwarding image")
 And to solve the next challenge, we can use a dynamic DNS service like **noip**, so we will be able to reserve a domain name like "myhome.ddns.net" for example to point to the router's public IP address.
 
 ## Deploy a web server
